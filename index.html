@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SANDARUWAN AI HUB</title>
 
 <style>
@@ -12,6 +13,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #050812;
     color: white;
@@ -19,23 +24,29 @@ body {
 }
 
 header {
-    padding: 25px 8%;
+    padding: 22px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #172b4d;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid #18365c;
 }
 
 .logo {
     color: #00aaff;
-    font-size: 24px;
+    font-size: 23px;
     font-weight: bold;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #00aaff;
 }
 
 .hero {
@@ -45,11 +56,11 @@ nav a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 .hero h1 {
-    font-size: 55px;
+    font-size: clamp(32px, 6vw, 58px);
     margin-bottom: 20px;
 }
 
@@ -58,7 +69,7 @@ nav a {
 }
 
 .hero p {
-    color: #aab6ca;
+    color: #b3c1d6;
     font-size: 18px;
     line-height: 1.7;
     max-width: 650px;
@@ -66,56 +77,86 @@ nav a {
 
 .button {
     display: inline-block;
-    margin-top: 30px;
-    padding: 15px 35px;
+    margin-top: 25px;
+    padding: 15px 32px;
     background: #007bff;
     color: white;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #00aaff;
+    transform: translateY(-3px);
 }
 
 section {
-    padding: 65px 8%;
+    padding: 70px 8%;
     text-align: center;
 }
 
 section h2 {
-    font-size: 32px;
+    font-size: 34px;
     color: #00aaff;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
 .cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
 }
 
 .card {
     background: #101a2c;
     border: 1px solid #18365c;
-    border-radius: 12px;
-    padding: 30px;
-    width: 280px;
+    border-radius: 14px;
+    padding: 35px 25px;
+    width: 300px;
 }
 
 .card h3 {
-    margin-bottom: 15px;
     color: #00aaff;
+    margin-bottom: 18px;
 }
 
 .card p {
     color: #b5c0d0;
-    line-height: 1.6;
+    line-height: 1.7;
+}
+
+.version {
+    color: #00d9ff;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.about-text {
+    color: #b5c0d0;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
 }
 
 footer {
-    padding: 25px;
+    padding: 30px 15px;
     text-align: center;
-    border-top: 1px solid #172b4d;
+    border-top: 1px solid #18365c;
     color: #8290a8;
+}
+
+@media(max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
 }
 </style>
 </head>
@@ -124,6 +165,7 @@ footer {
 
 <header>
     <div class="logo">SANDARUWAN AI HUB</div>
+
     <nav>
         <a href="#home">Home</a>
         <a href="#products">Products</a>
@@ -132,7 +174,9 @@ footer {
 </header>
 
 <div class="hero" id="home">
-    <h1>WELCOME TO <span>SANDARUWAN AI HUB</span></h1>
+
+    <h1>WELCOME TO<br>
+    <span>SANDARUWAN AI HUB</span></h1>
 
     <p>
         Your Gateway to the World of AI.
@@ -140,53 +184,90 @@ footer {
         and innovative technology.
     </p>
 
-    <a href="#products" class="button">EXPLORE PRODUCTS</a>
+    <a href="#products" class="button">
+        EXPLORE PRODUCTS
+    </a>
+
 </div>
 
 <section id="products">
+
     <h2>OUR PRODUCTS</h2>
 
     <div class="cards">
 
         <div class="card">
+
             <h3>SANDARUWAN AI</h3>
+
             <p>
                 Your personal Windows AI assistant.
                 Smart commands and useful desktop features.
             </p>
-            <a href="#" class="button">Coming Soon</a>
+
+            <div class="version">VERSION 2.0</div>
+
+            <a href="https://github.com/sandaruwanAIhub/sandaruwan-ai-hub/releases/download/v2.0/SANDARUWAN_AI_v2.0_setup.exe"
+               class="button"
+               download>
+                DOWNLOAD NOW
+            </a>
+
         </div>
 
         <div class="card">
+
             <h3>AI IMAGE GENERATOR</h3>
+
             <p>
-                Turn creative ideas into amazing AI-generated images.
+                Turn your creative ideas into amazing
+                AI-generated images.
             </p>
-            <a href="#" class="button">Coming Soon</a>
+
+            <a href="#" class="button">
+                COMING SOON
+            </a>
+
         </div>
 
         <div class="card">
+
             <h3>MORE AI TOOLS</h3>
+
             <p>
-                Explore future AI applications and innovative software.
+                Explore future AI applications
+                and innovative software.
             </p>
-            <a href="#" class="button">Coming Soon</a>
+
+            <a href="#" class="button">
+                COMING SOON
+            </a>
+
         </div>
 
     </div>
+
 </section>
 
 <section id="about">
+
     <h2>ABOUT US</h2>
-    <p>
+
+    <p class="about-text">
         SANDARUWAN AI HUB is a technology project
         focused on building useful AI tools and software
         for everyone.
+        <br><br>
+        Created with passion for technology and innovation.
     </p>
+
 </section>
 
 <footer>
-    © 2026 SANDARUWAN AI HUB. All Rights Reserved.
+
+    © 2026 SANDARUWAN AI HUB.
+    All Rights Reserved.
+
 </footer>
 
 </body>
