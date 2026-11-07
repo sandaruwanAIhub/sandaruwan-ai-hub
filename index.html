@@ -158,6 +158,32 @@ footer {
         font-size: 14px;
     }
 }
+
+/* Music Player product card */
+.music-card {
+    background: linear-gradient(145deg, #0b0b10 0%, #111523 100%);
+    border: 1px solid #5e5b8e;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .25);
+}
+.music-card h3 { color: #92dcff; }
+.music-card .version { color: #c6a5ff; }
+.music-symbol {
+    font-size: 40px;
+    color: #91dcff;
+    text-shadow: 2px 1px 14px #aa84ff, -2px -1px 18px #ff88c8;
+    margin-bottom: 15px;
+}
+.music-coming-soon {
+    background: linear-gradient(100deg, #167bb3, #7657b7, #b45189);
+    opacity: .8;
+    cursor: default;
+    user-select: none;
+}
+.music-coming-soon:hover {
+    background: linear-gradient(100deg, #167bb3, #7657b7, #b45189);
+    transform: none;
+}
+
 </style>
 </head>
 
@@ -212,6 +238,23 @@ footer {
                download>
                 DOWNLOAD NOW
             </a>
+
+        </div>
+
+        <div class="card music-card">
+
+            <div class="music-symbol" aria-hidden="true">♫</div>
+            <h3>SANDARUWAN MUSIC PLAYER</h3>
+
+            <p>
+                A premium Windows music player featuring playlists,
+                a 10-band equalizer, and a circular audio visualizer.
+            </p>
+
+            <div class="version">VERSION 3.0 · WINDOWS</div>
+            <span class="button music-coming-soon" aria-label="Music Player download coming soon">
+                DOWNLOAD COMING SOON
+            </span>
 
         </div>
 
